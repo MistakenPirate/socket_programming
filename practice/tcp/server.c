@@ -34,12 +34,11 @@ int main(){
         read(client_fd, &buf, 100);
         printf("Client: %s\n", buf);
         printf("You:");
-        scanf("%99[^\n]", buf);
+        scanf("%s", buf);
         write(client_fd, &buf, 100);
-
-        close(client_fd);
     }
 
+    close(client_fd);
     close(server_fd);
     return 0;
 }

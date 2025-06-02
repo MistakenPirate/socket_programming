@@ -32,11 +32,11 @@ int main(){
     while(1){
         char buf[100];
         printf("You:");
-        scanf("%99[^\n]", buf);
+        scanf("%s", buf);
 
         write(server_fd, &buf, 100);
         read(server_fd, &buf, 100);
-        printf("Server: %s", buf);
+        printf("Server: %s\n", buf);
     }
 
     close(server_fd);
