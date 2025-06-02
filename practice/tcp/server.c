@@ -28,7 +28,7 @@ int main(){
 
     while(1){
         char buf[100];
-        client_len = sizeof(client_len);
+        client_len = sizeof(server_addr);
         client_fd = accept(server_fd, (struct sockaddr *)&server_addr, &client_len);
 
         read(client_fd, &buf, 100);
